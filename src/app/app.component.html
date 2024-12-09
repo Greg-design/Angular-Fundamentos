@@ -1,4 +1,21 @@
-<div class="cards-container">
+<!-- <div class="cards-container">
   <app-card></app-card>
   <app-card-roxo></app-card-roxo>
-</div>
+</div> -->
+
+<input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled" (input)="handleInputEvent($event)">
+<br>
+<br>
+<button (click)="disableInput()">Desabilitar</button>
+<button (click)="enableInput()">Habilitar</button>
+
+<br>
+<br>
+<button (click)="setInputText()">Text</button>
+<button (click)="setInputPassword()">Password</button>
+
+<br>
+<br>
+<button [attr.title]="buttonTitle">Teste</button>
+<button [attr.disabled]="buttonDisabled ? true : null">Disabled</button>
+<button (click)="onButtonClick()">Mudar props</button>
