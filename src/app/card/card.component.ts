@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 interface Iplano {
   infos: IInfos;
@@ -15,11 +15,14 @@ interface IInfos {
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
+  @Input('planType') planType: string = '';
+  @Input({ required: true }) planPrice: number = 0;
+
   // @ts-ignore
-  plano: Iplano = {
-    infos: {
-      tipo: 'Simples',
-      preco: 100,
-    },
-  };
+  // plano: Iplano = {
+  //   infos: {
+  //     tipo: 'Simples',
+  //     preco: 100,
+  //   },
+  // };
 }

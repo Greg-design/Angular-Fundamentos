@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  cardPlanType = 'Simples';
+  cardPlanPrice = 100;
+
   title = 'first-project';
   inputText = 'Texto inicial';
   inputType = 'text';
@@ -13,6 +16,15 @@ export class AppComponent {
 
   buttonTitle = 'Título do botão';
   buttonDisabled = false;
+
+  widthButton1 = '110px';
+  stylesObj = {
+    width: '160px',
+    backgroundColor: 'grey',
+  };
+
+  isRedButton = true;
+  isGreenButton = true;
 
   enableInput() {
     this.isDisabled = false;
@@ -43,5 +55,18 @@ export class AppComponent {
   onButtonClick() {
     this.buttonTitle = 'Título alteradooo';
     this.buttonDisabled = !this.buttonDisabled;
+  }
+
+  updateStyleObj() {
+    this.stylesObj.width = '170px';
+    this.stylesObj.backgroundColor = 'lightblue';
+  }
+
+  // maneira correta de atualizar objetos
+  updateStyleObjCorrect() {
+    this.stylesObj = {
+      width: '170px',
+      backgroundColor: 'lightblue',
+    };
   }
 }

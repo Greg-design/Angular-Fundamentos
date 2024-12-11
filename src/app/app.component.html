@@ -1,9 +1,10 @@
-<!-- <div class="cards-container">
-  <app-card></app-card>
-  <app-card-roxo></app-card-roxo>
-</div> -->
+<div class="cards-container">
+  <app-card [planType]="cardPlanType" [planPrice]="cardPlanPrice"></app-card>
 
-<input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled" (input)="handleInputEvent($event)">
+  <app-card-roxo></app-card-roxo>
+</div>
+
+<!-- <input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled" (input)="handleInputEvent($event)">
 <br>
 <br>
 <button (click)="disableInput()">Desabilitar</button>
@@ -18,4 +19,26 @@
 <br>
 <button [attr.title]="buttonTitle">Teste</button>
 <button [attr.disabled]="buttonDisabled ? true : null">Disabled</button>
-<button (click)="onButtonClick()">Mudar props</button>
+<button (click)="onButtonClick()">Mudar props</button> -->
+
+<!-- <button style="width: 100px; background-color: aqua;">Botão 0</button>
+
+<button [style.width]="widthButton1" [style.backgroundColor]="'blue'">Botão 1</button>
+
+<button [style]="{width: '150px', backgroundColor: 'orange'}">Botão 2</button>
+
+<button [style]="stylesObj">Botão 3</button>
+
+<br>
+
+<button (click)="updateStyleObj()">Atualizar Obj</button>
+<button (click)="updateStyleObjCorrect()">Atualizar Obj correto</button> -->
+
+<!-- <button [class.red-button]="isRedButton">CSS class binding - Vermelho</button>
+
+<button [class.green-button]="isGreenButton">CSS class binding - Verde</button>
+
+<button [class]="{
+  'red-button': false,
+  'green-button': true
+}">CSS class binding - Objeto</button> -->
