@@ -69,4 +69,8 @@ export class AppComponent {
       backgroundColor: 'lightblue',
     };
   }
+
+  handlePlanType(text: string) {
+    this.cardPlanType = text;
+  }
 }

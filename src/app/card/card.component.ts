@@ -15,8 +15,28 @@ interface IInfos {
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
-  @Input('planType') planType: string = '';
   @Input({ required: true }) planPrice: number = 0;
+
+  //private _planType: string = '';
+
+  @Input({
+    alias: 'planType',
+    transform: (value: string) => value.toUpperCase(),
+  })
+  planType: string = '';
+
+  // @Input('planType')
+  // set planType(value: string) {
+  //   this._planType = value.toUpperCase();
+  // }
+
+  // get planType(): string {
+  //   return this._planType;
+  // }
+
+  buttonClicked(valueEmitted: boolean) {
+    console.log('botão clicado', valueEmitted);
+  }
 
   // @ts-ignore
   // plano: Iplano = {

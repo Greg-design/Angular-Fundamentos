@@ -4,6 +4,8 @@
   <app-card-roxo></app-card-roxo>
 </div>
 
+<input #meuInput type="text" (keyup)="handlePlanType(meuInput.value)" placeholder="Digite o plano">
+
 <!-- <input id="meu-input" [value]="inputText" [type]="inputType" [disabled]="isDisabled" (input)="handleInputEvent($event)">
 <br>
 <br>
